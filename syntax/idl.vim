@@ -1,16 +1,19 @@
 " Vim syntax file
 
 let b:current_sytax="idl"
-syn match syntaxElementKeyword "if[ \t\n]\+not[ \t\n]\+otherwise[ \t\n]\+specified" "is[ \t\n]\+the[ \t\n]\+same[ \t\n]\+as" "is[ \t\n]\+not[ \t\n]\+the[ \t\n]\+same[ \t\n]\+as" "spans[ \t\n]\+block[ \t\n]\+to" "is[ \t\n]\+integer[ \t\n]\+zero" "is[ \t\n]\+floating[ \t\n]\+point[ \t\n]\+zero" "if[ \t\n]\+not[ \t\n]\+otherwise[ \t\n]\+specified"
+syn match syntaxElementKeyword "spans[ \t\n]\+block[ \t\n]\+to"
 syn match syntaxElementKeyword "if\([ \t\n]\+not[ \t\n]\+otherwise[ \t\n]\+specified\)\?"
-syn keyword syntaxElementKeyword for all some and from is of as with reaches has to strictly at then else endif
+syn match syntaxElementKeyword "is\(\([ \t\n]\+the[ \t\n]\+same[ \t\n]\+as\)\|\([ \t\n]\+not[ \t\n]\+the[ \t\n]\+same[ \t\n]\+as\)\|\([ \t\n]\+integer[ \t\n]\+zero\)\|\([ \t\n]\+floating[ \t\n]\+point[ \t\n]\+zero\)\)\?"
+syn keyword syntaxElementKeyword for all some and from of with reaches has strictly at then else endif
+syn match syntaxElementKeyword "as" "to"
 syn keyword syntaxItemKeyword first second third fourth
 syn match syntaxConsts "dependence[ \t\n]\+edge"
-syn match syntaxConsts "phi[ \t\n]\+node"
+syn match syntaxConsts "reaches[ \t\n]\+phi[ \t\n]\+node"
 syn match syntaxConsts "data[ \t\n]\+flow"
 syn match syntaxConsts "control[ \t\n]\+dominance"
 syn match syntaxConsts "control[ \t\n]\+flow\(\([ \t\n]\+postdominates\)\|\([ \t\n]\+dominates\)\)\?"
-syn keyword syntaxConsts argument instruction unused same
+syn keyword syntaxConsts argument instruction unused
+syn match syntaxConsts "same"
 syn keyword structureKeyword Constraint nextgroup=structName End inherits nextgroup=structName collect skipWhite
 syn match structName '\i\+' contained
 syn keyword types float vector pointer integer preexecution
