@@ -21,7 +21,7 @@ syn match structName '\i\+' contained
 syn keyword types float vector pointer integer preexecution
 syn match types "a[ \t\n]\+constant" "an[ \t\n]\+argument"
 syn match types "numeric[ \t\n]\+constant"
-syn keyword exportKeyword Export Import nextgroup filename
+syn keyword exportKeyword Export Import nextgroup=filename
 syn match fileName '\i\+' contained
 syn match comment "\v#.*$"
 
