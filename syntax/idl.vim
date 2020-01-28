@@ -13,7 +13,7 @@ syn match syntaxConsts "reaches[ \t\n]\+phi[ \t\n]\+node"
 syn match syntaxConsts "data[ \t\n]\+flow"
 syn match syntaxConsts "successor"
 syn match syntaxConsts "control[ \t\n]\+dominance"
-syn match syntaxConsts "control[ \t\n]\+flow\(\([ \t\n]\+postdominates\)\|\([ \t\n]\+dominates\)\)\?"
+syn match syntaxConsts "control[ \t\n]\+flow\(\([ \t\n]\+post[ \t\n]\+dominates\)\|\([ \t\n]\+dominates\)\)\?"
 syn keyword syntaxConsts argument instruction unused
 syn match syntaxConsts "same"
 syn keyword structureKeyword Constraint nextgroup=structName End inherits nextgroup=structName collect skipWhite
